@@ -130,9 +130,9 @@ body {
     width: 80vh;
 }
 
-.container-fluid{
-    background-color: #f8f9fa;
- } 
+/* .container-fluid{
+    background-color: #f8f9fa;  
+ }  */
 
 /* Optional: Adjust height for smaller screens */
 @media (max-width: 576px) {
