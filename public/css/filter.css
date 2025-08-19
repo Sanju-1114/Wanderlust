@@ -1,0 +1,144 @@
+/* === Filters Wrapper with Arrows === */
+.filters-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    width: 2.5rem;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255);
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    pointer-events: auto;
+}
+
+.arrow:hover {
+    background: rgb(97, 82, 82);
+}
+
+.arrow-left {
+    left: 0.2rem;
+}
+
+.arrow-right {
+    right: 0.2rem;
+}
+
+.arrow.disabled {
+    display: none;
+}
+
+/* === Filters === */
+#filters {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 1rem;
+    padding: 1rem 0;    /* space for arrows */
+    border-bottom: 1px solid #ddd;    /* Hide native scrollbar */
+    scrollbar-width: none;    /* Firefox */
+}
+
+#filters::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}
+
+.filter {
+    text-align: center;
+    opacity: 0.7;
+    min-width: 4.5rem;
+    flex-shrink: 0;
+    flex-shrink: 0;
+    margin-top: 2rem;
+}
+
+.filter:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.filter p {
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+}
+
+.tax-toggle {
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.tax-info {
+    display: none;
+    color: gray;
+    font-size: 0.9rem;
+}
+
+/* === Card Grid === */
+.listing-card {
+    margin-bottom: 2rem;
+}
+
+.listing-card img {
+    width: 100%;
+    height: 18rem;
+    object-fit: cover;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.listing-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* === Responsive Tweaks === */
+@media (max-width: 768px) {
+    .filter p {
+        font-size: 0.75rem;
+    }
+
+    .tax-toggle {
+        margin-left: auto;
+    }
+
+    .listing-card img {
+        height: 14rem;
+    }
+
+    .arrow {
+        width: 1.6rem;
+        height: 1.6rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .listing-card img {
+        height: 12rem;
+    }
+
+    .tax-toggle {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.8rem;
+    }
+}
