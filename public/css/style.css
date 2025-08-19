@@ -24,6 +24,9 @@ body {
     color: #222222 !important;
 }
 
+.container-fluid {
+  background-color: #f8f9fa;
+}   
 
 /* Footer */
 .f-info-links a {
