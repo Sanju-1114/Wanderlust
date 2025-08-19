@@ -126,19 +126,16 @@ body {
 
 /* Map */
 #map {
-  height: 400px;
-  width: 80vh;
-  border-radius: 8px;
+    height: 400px;
+    width: 80vh;
 }
+
+.container-fluid{
+    background-color: #f8f9fa;
+ } 
 
 /* Optional: Adjust height for smaller screens */
 @media (max-width: 576px) {
   #map {
     height: 300px;
   }
-}
-
-.container-fluid {
-  background-color: #f8f9fa;
-  padding: 1rem;
-}
