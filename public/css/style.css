@@ -10,20 +10,16 @@ body {
 }
 
 /* Navbar */
-
 .navbar {
     height: 5rem;
 }
-
 .fa-compass {
     color: #fe424d;
     font-size: 2rem;
 }
-
 .nav-link {
     color: #222222 !important;
 }
-
 .container-fluid {
   background-color: #f8f9fa;
 }   
@@ -33,11 +29,9 @@ body {
     text-decoration: none;
     color: #222222;
 }
-
 .f-info-links a:hover {
     text-decoration: underline;
 }
-
 .f-info-links,
 .f-info-socials,
 .f-info-brand {
@@ -45,83 +39,73 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
-
 .f-info-socials i {
     font-size: 1.2rem;
     margin-right: 1rem;
 }
-
 .f-info {
     text-align: center;
-    height: 8rem;
+    min-height: 8rem;
     background-color: #ebebeb;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: space-evenly;
+    align-items: center;
+    padding: 1rem;
 }
 
 /* Cards */
-
 .listing-card {
     border: none !important;
     margin-bottom: 2rem;
 }
-
 .card-img-top {
     border-radius: 1rem !important;
     width: 100% !important;
     object-fit: cover !important;
+    height: auto;
+    max-height: 20rem;
 }
-
 .card-body {
-    padding: 0 !important;
+    padding: 0.5rem !important;
 }
-
 .card-text p {
     font-weight: 400;
 }
-
 .listing-link {
     text-decoration: none;
 }
 
-/* Card Effect */
-
+/* Card Hover Effect */
 .card-img-overlay {
     opacity: 0;
+    transition: opacity 0.3s ease;
 }
-
 .card-img-overlay:hover {
     opacity: 0.2;
     background-color: white;
 }
 
-/* NewPage */
-
-.add-btn {
-    background-color: #fe424d !important;
-    border: none !important;
-}
-
-/* Edit Page */
-
+/* Buttons */
+.add-btn,
 .edit-btn {
     background-color: #fe424d !important;
     border: none !important;
 }
 
-/* Show Page  */
-
+/* Show Page */
 .show-img {
-    height: 30vh;
+    height: auto;
+    max-height: 40vh;
+    object-fit: cover;
 }
-
 .btns {
     display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
-
 .show-card {
     padding-left: 0;
     padding-right: 0;
@@ -129,23 +113,41 @@ body {
 
 /* Map */
 #map {
+  width: 100%;
   height: 400px;
-  width: 80vw;
-  max-width: 600px;
-  margin: 0 auto;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
 }
+
+/* ============================= */
+/* RESPONSIVE MEDIA QUERIES */
+/* ============================= */
 
 /* Mobile (up to 576px) */
 @media (max-width: 576px) {
-  #map {
-    height: 250px;
-    width: 90vw;
+  body {
+    font-size: 0.9rem;
   }
 
-  .col-6.offset-3 {
-    width: 100%;
+  #map {
+    height: 250px;
+  }
+
+  .card-img-top {
+    max-height: 15rem;
+  }
+
+  .btns {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* Ensure columns collapse full width */
+  .col-6.offset-3,
+  .col-8.offset-2,
+  .col-8.offset-3 {
+    width: 100% !important;
     margin: 0 auto;
     padding: 0 1rem;
   }
@@ -155,11 +157,12 @@ body {
 @media (min-width: 577px) and (max-width: 768px) {
   #map {
     height: 300px;
-    width: 85vw;
   }
 
-  .col-6.offset-3 {
-    width: 80%;
+  .col-6.offset-3,
+  .col-8.offset-2,
+  .col-8.offset-3 {
+    width: 90% !important;
     margin: 0 auto;
   }
 }
@@ -168,11 +171,12 @@ body {
 @media (min-width: 769px) and (max-width: 992px) {
   #map {
     height: 350px;
-    width: 80vw;
   }
 
-  .col-6.offset-3 {
-    width: 70%;
+  .col-6.offset-3,
+  .col-8.offset-2,
+  .col-8.offset-3 {
+    width: 80% !important;
     margin: 0 auto;
   }
 }
